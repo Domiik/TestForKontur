@@ -56,27 +56,5 @@ final class SpaceRocketViewModel: ObservableObject {
     }
     
     
-    func getCountRockets() -> Int {
-        return rockets?.count ?? 0
-    }
-    
-    
-    func cellViewModel(forIndexPath indexPath: IndexPath) -> HorizontalSettingsViewModel? {
-        guard let rockets = rockets else { return nil }
-        let rocketHorizontal = rockets[indexPath.row]
-        return HorizontalSettingsViewModel(rocket: rocketHorizontal)
-    }
-    
-    
-    func selectedAllSettingViewModel(indexPath: IndexPath) -> AllSettingsViewModel? {
-        guard let settings = rockets else { return nil }
-        let allSetting = settings[indexPath.row]
-        // guard let selectIndexPath = selectedIndexPath else { return nil}
-        return AllSettingsViewModel(allSettings: allSetting)
-    }
-    
-    func selectRow(atIndexPath indexPath: IndexPath) {
-        self.selectedIndexPath = indexPath
-    }
-    
+  
 }

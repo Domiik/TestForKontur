@@ -33,7 +33,6 @@
 		6295D21527ED0FD3009C87D6 /* LooksStartCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6295D21427ED0FD3009C87D6 /* LooksStartCellViewModel.swift */; };
 		6295D21727ED170E009C87D6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6295D21627ED170E009C87D6 /* SettingsView.swift */; };
 		6295D21927ED1903009C87D6 /* SegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6295D21827ED1903009C87D6 /* SegmentControl.swift */; };
-		6295D21C27EDED6B009C87D6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6295D21B27EDED6B009C87D6 /* Settings.swift */; };
 		6295D21E27EDEE6D009C87D6 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6295D21D27EDEE6D009C87D6 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,6 @@
 		6295D21427ED0FD3009C87D6 /* LooksStartCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LooksStartCellViewModel.swift; sourceTree = "<group>"; };
 		6295D21627ED170E009C87D6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		6295D21827ED1903009C87D6 /* SegmentControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentControl.swift; sourceTree = "<group>"; };
-		6295D21B27EDED6B009C87D6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		6295D21D27EDEE6D009C87D6 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -137,7 +135,6 @@
 			children = (
 				62072DB427E4BE7E00FAB7A6 /* SpaceRocket.swift */,
 				6295D21027EB95BB009C87D6 /* ListOfRocketLaunch.swift */,
-				6295D21B27EDED6B009C87D6 /* Settings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 				6295D20627E92F05009C87D6 /* VerticalSettingsViewModel.swift in Sources */,
 				6295D20227E513F8009C87D6 /* HorizontalSettingsViewModel.swift in Sources */,
 				6295D20427E8DDCF009C87D6 /* AllSettingsViewModel.swift in Sources */,
-				6295D21C27EDED6B009C87D6 /* Settings.swift in Sources */,
 				62072DAA27E498BF00FAB7A6 /* HorizontalSettingsView.swift in Sources */,
 				6295D21727ED170E009C87D6 /* SettingsView.swift in Sources */,
 				62072DB827E4BFAB00FAB7A6 /* NetworkManager.swift in Sources */,

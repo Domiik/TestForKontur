@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
-import Combine
+
 
 struct SettingsView: View {
     
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: HorizontalSettingsViewModel
-    
+    @ObservedObject var setting: SettingsViewModel
+    //@State var h = HorizontalState()
     
     @State var selectionHight = 0
     @State var selectionDiametr = 0
@@ -22,11 +23,13 @@ struct SettingsView: View {
     
     
     
-    init(viewModel: HorizontalSettingsViewModel) {
+    init(viewModel: HorizontalSettingsViewModel, settings: SettingsViewModel) {
         self.viewModel = viewModel
+        self.setting = settings
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().barStyle = .default
+  
     }
     
     var body: some View {
@@ -41,7 +44,7 @@ struct SettingsView: View {
                         Spacer()
                         let item1 = SegmentItem(title: "m", color: Color( #colorLiteral(red: 0.1294117868, green: 0.1294117868, blue: 0.1294117868, alpha: 1)), selectionIndex: 0)
                         let item2 = SegmentItem(title: "ft", color: Color( #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), selectionIndex: 1)
-                        SegmentControl(selection: $viewModel.stateHeight, items: [item1, item2])
+                        SegmentControl(selection: $setting.typeHeight, items: [item1, item2])
                             .padding()
                     }
                     HStack {
@@ -51,7 +54,7 @@ struct SettingsView: View {
                         Spacer()
                         let item1 = SegmentItem(title: "m", color: Color( #colorLiteral(red: 0.1294117868, green: 0.1294117868, blue: 0.1294117868, alpha: 1)), selectionIndex: 0)
                         let item2 = SegmentItem(title: "ft", color: Color( #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), selectionIndex: 1)
-                        SegmentControl(selection: $selectionDiametr, items: [item1, item2])
+                        SegmentControl(selection: $setting.typeDiametr, items: [item1, item2])
                             .padding()
                     }
                     HStack {
@@ -61,7 +64,7 @@ struct SettingsView: View {
                         Spacer()
                         let item1 = SegmentItem(title: "kg", color: Color( #colorLiteral(red: 0.1294117868, green: 0.1294117868, blue: 0.1294117868, alpha: 1)), selectionIndex: 0)
                         let item2 = SegmentItem(title: "lb", color: Color( #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), selectionIndex: 1)
-                        SegmentControl(selection: $selectionMass, items: [item1, item2])
+                        SegmentControl(selection: $setting.typeMass, items: [item1, item2])
                             .padding()
                     }
                     HStack {
@@ -71,7 +74,7 @@ struct SettingsView: View {
                         Spacer()
                         let item1 = SegmentItem(title: "kg", color: Color( #colorLiteral(red: 0.1294117868, green: 0.1294117868, blue: 0.1294117868, alpha: 1)), selectionIndex: 0)
                         let item2 = SegmentItem(title: "kb", color: Color( #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)), selectionIndex: 1)
-                        SegmentControl(selection: $selectionTrueMass, items: [item1, item2])
+                        SegmentControl(selection: $setting.typePayLoadWeigh, items: [item1, item2])
                             .padding()
                     }
                 }
@@ -81,22 +84,12 @@ struct SettingsView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button("Закрыть") {
                             dismiss()
-                            viewModel.height.shuffled()
                         }
                         .foregroundColor(.white)
                     }
                 }
             }
         }
-        
-        
-        
-        //               return VStack() {
-        //                     Spacer()
-        //                     Text("Selected Item: \(selection)")
-        //                     SegmentControl(selection: $selection, items: [item1, item2])
-        //                     Spacer()
-        //               }
     }
 }
 

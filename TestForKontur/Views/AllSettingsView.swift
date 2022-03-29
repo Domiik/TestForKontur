@@ -10,6 +10,7 @@ import SwiftUI
 struct AllSettingsView: View {
     
     @ObservedObject var viewModel: AllSettingsViewModel
+    @ObservedObject var setting = SettingsViewModel()
     @State private var showingSheet = false
     @State private var showingSettings = false
     
@@ -31,11 +32,11 @@ struct AllSettingsView: View {
                             .padding()
                     }
                     .sheet(isPresented: $showingSettings) {
-                        SettingsView(viewModel: HorizontalSettingsViewModel(rocket: viewModel.allSettings))
+                        SettingsView(viewModel: HorizontalSettingsViewModel(rocket: viewModel.allSettings), settings: setting)
                     }
                 }
                 
-                HorizontalSettingsView(viewModelHorizontalSettings: HorizontalSettingsViewModel(rocket: viewModel.allSettings))
+                HorizontalSettingsView(viewModelHorizontalSettings: HorizontalSettingsViewModel(rocket: viewModel.allSettings), settings: setting)
                 VerticalSettingsView(viewModel: VerticalSettingsViewModel(verticalSettingsViewModel: viewModel.allSettings))
                 Button {
                     showingSheet.toggle()

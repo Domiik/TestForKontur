@@ -7,11 +7,10 @@
 
 import Foundation
 
-
 final class SettingsViewModel: ObservableObject {
-    @Published var height: Int = UserDefaults.standard.integer(forKey: "height") {
-        didSet {
-            UserDefaults.standard.set(height, forKey: "height")
-        }
-    }
+    @Published var typeHeight = Int()
+    @Published var typeDiametr = Int()
+    @Published var typeMass = Int()
+    @Published var typePayLoadWeigh = Int()
+   
 }

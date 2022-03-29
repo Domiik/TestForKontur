@@ -11,20 +11,10 @@ import Foundation
 class HorizontalSettingsViewModel: ObservableObject {
     
     @Published private var rocketsHorizontalSettings: SpaceRocket!
-    @Published var stateHeight: Int = 0
-    @Published var height: String = "" {
-        willSet {
-            if stateHeight == 0 {
-                height = heightFt
-            } else {
-                height = heightMeter
-            }
-        }
-    }
-    
-    
+
     init(rocket: SpaceRocket) {
         self.rocketsHorizontalSettings = rocket
+      
     }
     
     
@@ -59,23 +49,8 @@ class HorizontalSettingsViewModel: ObservableObject {
     var payloadWeightsLb: String {
         return rocketsHorizontalSettings.payloadWeights.first?.lb.description ?? "nil"
     }
-    
-    
-     func getHeight() -> String {
-         if stateHeight == 0 {
-            print("metr")
-             print(stateHeight)
-
-            return heightMeter
-        } else {
-            print("ft")
-            print(stateHeight)
-
-            return heightFt
-        }
-         
-         
-    }
-        
-  
+ 
 }
+
+
+

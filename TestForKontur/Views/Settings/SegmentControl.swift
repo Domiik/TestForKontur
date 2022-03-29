@@ -18,7 +18,7 @@ struct SegmentControl : View {
 
             return HStack(spacing: 0) {
                   ForEach (items, id: \.self) { item in
-                        SegmentButton(text: item.title, width: width, color: item.color, selectionIndex: item.selectionIndex, selection: self.$selection)
+                      SegmentButton(text: item.title, width: width, color: item.color, selectionIndex: item.selectionIndex, selection: self.$selection)
                   }
             }.font(.body)
                   .padding(5)

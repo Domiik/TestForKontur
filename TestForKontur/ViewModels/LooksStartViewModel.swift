@@ -58,26 +58,4 @@ final class LooksStartViewModel: ObservableObject {
             }
         }
     }
-    
-   
-    
-    //    func getStartsOnId(id: String) {
-    //        guard let starts = starts else {
-    //            print("exit start")
-    //            return
-    //        }
-    //        for start in starts {
-    //            if start.rocket.rawValue == id {
-    //
-    //
-    //            }
-    //        }
-    //        print(startsFilter)
-    //        print("exit")
-    //    }
-    
-    
-    //    var name: String {
-    //        return looksStartViewModel.name ?? "nil"
-    //    }
 }
