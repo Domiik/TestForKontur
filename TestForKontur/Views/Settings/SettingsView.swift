@@ -13,12 +13,7 @@ struct SettingsView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var viewModel: HorizontalSettingsViewModel
     @ObservedObject var setting: SettingsViewModel
-    //@State var h = HorizontalState()
     
-    @State var selectionHight = 0
-    @State var selectionDiametr = 0
-    @State var selectionMass = 0
-    @State var selectionTrueMass = 0
     
     
     
@@ -29,7 +24,7 @@ struct SettingsView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().barStyle = .default
-  
+        
     }
     
     var body: some View {
@@ -94,12 +89,6 @@ struct SettingsView: View {
 }
 
 
-
-//struct SettingsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SettingsView()
-//    }
-//}
 
 
 

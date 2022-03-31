@@ -1,5 +1,5 @@
 //
-//  VertivalSettingsViewCell.swift
+//  VerticalSettingsViewCell.swift
 //  TestForKontur
 //
 //  Created by Domiik on 18.03.2022.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct VertivalSettingsViewCell: View {
+
+struct VerticalSettingsViewCell: View {
     
     @State var firstLine: String
     @State var secondLine: String
@@ -51,8 +52,8 @@ struct VertivalSettingsViewCell: View {
     }
 }
 
-struct VertivalSettingsViewCell_Previews: PreviewProvider {
+struct VerticalSettingsViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        VertivalSettingsViewCell(firstLine: "sadas", secondLine: "dsad", thirdLine: "eqweqw", firstLineAnswer: "sdadcz", secondLineAnswer: "rewt", thirdLineAnswer: "xcvg")
+        VerticalSettingsViewCell(firstLine: "sadas", secondLine: "dsad", thirdLine: "eqweqw", firstLineAnswer: "sdadcz", secondLineAnswer: "rewt", thirdLineAnswer: "xcvg")
     }
 }

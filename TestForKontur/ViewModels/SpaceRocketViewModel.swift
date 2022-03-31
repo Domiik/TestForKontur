@@ -9,18 +9,21 @@ import Foundation
 import SwiftUI
 import UIKit
 
+
 final class SpaceRocketViewModel: ObservableObject {
     
     enum State {
         case idle
         case loading
         case end
+        case error
     }
     
     @Published var rockets: [SpaceRocket]?
-    @Published var alertItem: AlertItem?
+    @Published var alertItem: APError?
     @Published var countRockets: Int?
     @Published private(set) var state = State.idle
+    @Published var hasError = false
     
     private var selectedIndexPath: IndexPath?
     
@@ -37,18 +40,20 @@ final class SpaceRocketViewModel: ObservableObject {
                     self.rockets = rockets
                     state = .end
                 case .failure(let error):
+                    state = .error
+                    hasError = true
+                    print(hasError)
                     switch error {
                     case .invalidData:
-                        alertItem = AlertContext.invalidData
-                        
+                        alertItem = .invalidData
                     case .invalidURL:
-                        alertItem = AlertContext.invalidURL
+                        alertItem = .invalidURL
                         
                     case .invalidResponse:
-                        alertItem = AlertContext.invalidResponse
+                        alertItem = .invalidResponse
                         
                     case .unableToComplete:
-                        alertItem = AlertContext.unableToComplete
+                        alertItem = .unableToComplete
                     }
                 }
             }

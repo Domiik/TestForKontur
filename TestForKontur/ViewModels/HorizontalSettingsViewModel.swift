@@ -17,7 +17,6 @@ class HorizontalSettingsViewModel: ObservableObject {
       
     }
     
-    
     var heightFt: String {
         return rocketsHorizontalSettings.height.feet?.description ?? "nil"
     }

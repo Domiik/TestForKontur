@@ -12,7 +12,6 @@ struct TestForKonturApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-           //HorizontalSettingsView()
         }
     }
 }

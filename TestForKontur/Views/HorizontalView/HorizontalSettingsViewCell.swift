@@ -27,7 +27,6 @@ struct HorizontalSettingsViewCell: View {
             }
             .padding()
             .background(Rectangle().fill(Color( #colorLiteral(red: 0.1294117868, green: 0.1294117868, blue: 0.1294117868, alpha: 1))).frame(width: 96, height: 96) .cornerRadius(30))
-     
             .padding()
     }
 }
@@ -35,6 +34,6 @@ struct HorizontalSettingsViewCell: View {
 
 struct HorizontalSettingsViewCell_Previews: PreviewProvider {
     static var previews: some View {
-        HorizontalSettingsViewCell(rockets: "229,6", settings: "Высота")
+        HorizontalSettingsViewCell(rockets: "229,6", settings: "Высота, ft")
     }
 }

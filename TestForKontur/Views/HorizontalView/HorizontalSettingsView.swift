@@ -22,38 +22,33 @@ struct HorizontalSettingsView: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(alignment: .center, spacing: 0) {
+            HStack(alignment: .center, spacing: -20) {
                 if setting.typeHeight == 0 {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.heightMeter, settings: "Высота")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.heightMeter, settings: "Высота, m")
                 } else {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.heightFt, settings: "Высота")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.heightFt, settings: "Высота, ft")
                 }
                 if setting.typeDiametr == 0 {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.diameterMetr, settings: "Диаметр")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.diameterMetr, settings: "Диаметр, m")
                 } else {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.diameterFt, settings: "Диаметр")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.diameterFt, settings: "Диаметр, ft")
                 }
                 if setting.typeMass == 0 {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.massKg, settings: "Масса")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.massKg, settings: "Масса, kg")
                 } else {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.massLb, settings: "Масса")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.massLb, settings: "Масса, ft")
                 }
                 if setting.typePayLoadWeigh == 0 {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.payloadWeightsKg, settings: "Нагрузка")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.payloadWeightsKg, settings: "Нагрузка, kg")
                 } else {
-                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.payloadWeightsLb, settings: "Нагрузка")
+                    HorizontalSettingsViewCell(rockets: viewModelHorizontalSettings.payloadWeightsLb, settings: "Нагрузка, lb")
                 }
-                
-                
             }
         }
-        
         .frame(height: 96)
         .padding()
-        
     }
 }
-
 
 
 

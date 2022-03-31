@@ -8,7 +8,7 @@
 import UIKit
 
 
-class NetworkManager: NSObject {
+class NetworkManager {
     
     static let shared           = NetworkManager()
     
@@ -16,10 +16,6 @@ class NetworkManager: NSObject {
     
     private let baseURLForStart  = "https://api.spacexdata.com/v4/launches"
    
-    
-    private override init() {}
-    
-    
     func getRockets(completed: @escaping (Result<[SpaceRocket], APError>) -> Void) {
         guard let url = URL(string: baseURL) else {
             completed(.failure(.invalidURL))
@@ -89,32 +85,4 @@ class NetworkManager: NSObject {
         
         task.resume()
     }
-    
-    
-//    func downloadImage(from urlString: String, completed: @escaping (UIImage?) -> Void) {
-//
-//        let cacheKey = NSString(string: urlString)
-//
-//        if let image = cache.object(forKey: cacheKey) {
-//            completed(image)
-//            return
-//        }
-//
-//        guard let url = URL(string: urlString) else {
-//            completed(nil)
-//            return
-//        }
-//
-//        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-//            guard let data = data, let image = UIImage(data: data) else {
-//                completed(nil)
-//                return
-//            }
-//
-//            self.cache.setObject(image, forKey: cacheKey)
-//            completed(image)
-//        }
-//
-//        task.resume()
-//    }
 }
